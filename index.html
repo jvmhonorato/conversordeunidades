@@ -12,22 +12,34 @@
 
     <form>
         <div class="mb-3">
-          <label for="exampleInputEmail1" class="form-label">Email address</label>
-          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-          <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+          <label for="milhas" class="form-label">Distância Milhas</label>
+          <input type="text" class="form-control" id="milhas" placeholder="milhas">
+         
         </div>
         <div class="mb-3">
-          <label for="exampleInputPassword1" class="form-label">Password</label>
-          <input type="password" class="form-control" id="exampleInputPassword1">
+          <label for="metros" class="form-label">Distância Metros</label>
+          <input type="text" class="form-control" id="metros" placeholder="metros">
         </div>
-        <div class="mb-3 form-check">
-          <input type="checkbox" class="form-check-input" id="exampleCheck1">
-          <label class="form-check-label" for="exampleCheck1">Check me out</label>
-        </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        
+        <button type="button" id="calc" class="btn btn-primary">Converter</button>
       </form>
 
-    <script src="jquery-3.6.0.min"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>
+    <script>
+        $(function(){
+            //pegar a class do botão 
+            $('#calc').click(function(){
+                //pegar valor digitado no unput milhas em float e estanciar em milhas
+                const milhas = parseFloat($('#milhas').val())
+                console.log(milhas)
+                const metros = 1609.34 * milhas
+                //estanciar em metros a quantidade de milhas digitadas * por 169.34
+                console.log(metros)
+                //captura  o id e com o .val()joga o retorno no input
+                $('#metros').val(metros)
+            })
+        })
+    </script>
 </body>
 </html>

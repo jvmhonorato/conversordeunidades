@@ -1,0 +1,7 @@
+1: crair arquivo index.html
+
+2: importar cdn do bootstrap e do jquery
+
+3: importar formulário do bootstrap e adaptar
+
+4: add <script>jquery
